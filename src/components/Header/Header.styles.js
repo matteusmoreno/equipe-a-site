@@ -31,6 +31,13 @@ export const LogoWrapper = styled.div`
 
 export const Logo = styled.img`
   height: 55px;
+  /* ADICIONADO PARA SUAVIDADE */
+  transition: transform 0.3s ease; 
+
+  /* ADICIONADO PARA O EFEITO DE CRESCER */
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const LogoText = styled.span`
@@ -111,7 +118,6 @@ export const CtaButton = styled.a`
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   
-  /* NOVO: Essencial para o efeito de brilho funcionar */
   position: relative;
   overflow: hidden;
 
@@ -119,12 +125,11 @@ export const CtaButton = styled.a`
     transition: transform 0.3s ease;
   }
 
-  /* NOVO: Pseudo-elemento que cria o efeito de brilho */
   &::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%; /* Começa fora do botão, à esquerda */
+    left: -100%;
     width: 100%;
     height: 100%;
     background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
@@ -132,7 +137,6 @@ export const CtaButton = styled.a`
   }
 
   &:hover {
-    /* NOVO: A cor do botão NÃO MUDA. Apenas ativamos a animação */
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 
@@ -140,7 +144,6 @@ export const CtaButton = styled.a`
       transform: translateX(5px);
     }
 
-    /* NOVO: Move o brilho para o outro lado, fazendo-o passar pelo botão */
     &::before {
       left: 100%;
     }
@@ -198,7 +201,6 @@ export const MobileMenu = styled.div`
     font-size: 1.2rem;
     padding: 0.8rem 1.5rem;
 
-    /* Desativamos o efeito de brilho no menu mobile para uma interação mais simples */
     &::before {
       display: none;
     }
