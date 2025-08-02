@@ -7,6 +7,7 @@ const Footer = () => {
     const whatsappUrl = "https://api.whatsapp.com/send?phone=5522997499766";
 
     return (
+        // NOVO ID para link do header
         <FooterContainer id="contato">
             <FooterContent>
                 <InfoColumn>
@@ -22,13 +23,8 @@ const Footer = () => {
                     <InfoText><FaEnvelope /> secretariacursoequipea@gmail.com</InfoText>
                 </InfoColumn>
 
-                <InfoColumn>
-                    <ColumnTitle>Área do Estudante</ColumnTitle>
-                    <InfoText><a href="https://portal.sponteeducacional.net.br/Default.aspx" target="_blank" rel="noopener noreferrer">Portal do aluno (Sponte)</a></InfoText>
-                    <InfoText><a href="https://app.portalsaseducacao.com.br/entrar/" target="_blank" rel="noopener noreferrer">Portal SAS</a></InfoText>
-                    <InfoText><a href="https://edifyeducation.com.br/edify-play/" target="_blank" rel="noopener noreferrer">Edify Play</a></InfoText>
-                    <InfoText><a href="https://simulados.evolucional.com.br/entrar?ReturnUrl=%2fpainel" target="_blank" rel="noopener noreferrer">Plataforma Evolucional</a></InfoText>
-                </InfoColumn>
+                {/* A COLUNA "ÁREA DO ESTUDANTE" FOI REMOVIDA DESTE ARQUIVO */}
+
             </FooterContent>
             <Copyright>
                 <SocialLinks>
