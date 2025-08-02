@@ -24,7 +24,7 @@ import 'swiper/css/grid';
 const Approved = () => {
     // CORREÇÃO: Usamos o useMemo para que a lista de anos seja calculada APENAS UMA VEZ.
     // Isso quebra o loop infinito.
-    const sortedYears = useMemo(() => Object.keys(approvedData).sort((a, b) => Number(b) - Number(a)), []);
+    const sortedYears = useMemo(() => Object.keys(approvedData).sort((a, b) => Number(a) - Number(b)), []);
 
     const [activeTab, setActiveTab] = useState(sortedYears[0]);
     const [indicatorStyle, setIndicatorStyle] = useState({});

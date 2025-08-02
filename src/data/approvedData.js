@@ -1,24 +1,4 @@
 export const approvedData = {
-    "2026": {
-    // Alunos de públicas deliberadamente fora de ordem alfabética
-    public: [
-      { name: "Zelia Ferreira", course: "Engenharia de Software (UFRJ)" },
-      { name: "Bruno Carvalho", course: "Letras (UERJ)" },
-      { name: "Amanda Lima", course: "História da Arte (UNIRIO)" },
-      { name: "Lucas Souza", course: "Física (UFF)" },
-      { name: "Yasmin Oliveira", course: "Relações Internacionais (UFRRJ)" },
-      { name: "Carlos Pereira", course: "Direito (UFF)" },
-    ],
-    // Alunos de medicina deliberadamente fora de ordem alfabética
-    private: [
-      { name: "Vanessa Gomes", university: "Univ. Vassouras" },
-      { name: "Rafael Almeida", university: "Unifeso" },
-      { name: "Beatriz Costa", university: "Univ. Vassouras" },
-      { name: "Thiago Santos", university: "Unifeso" },
-      { name: "Fernanda Ribeiro", university: "Estácio" },
-      { name: "Juliana Martins", university: "Unifeso" },
-    ],
-  },
     "2025": {
         public: [
             { name: "Gabriel Miguel", course: "Ciências Biológicas (UFF)" },
