@@ -12,12 +12,15 @@ import {
     FooterLogo,
     MapWrapper
 } from './Footer.styles';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
     const addressUrl = "https://www.google.com/maps/search/?api=1&query=Rua+Jo%C3%A3o+Laureano+da+Silva,+5,+Saquarema,RJ";
-    const whatsappUrl = "https://api.whatsapp.com/send?phone=5522997499766";
+    const whatsappUrl = "https://api.whatsapp.com/send/?phone=5522997499766&text&type=phone_number&app_absent=0";
     const mapEmbedUrl = "https://maps.google.com/maps?q=Rua%20Jo%C3%A3o%20Laureano%20da%20Silva%2C%205%2C%20Saquarema%2C%20RJ&t=&z=16&ie=UTF8&iwloc=&output=embed";
+    const instagramUrl = "https://www.instagram.com/colegioecursoequipea/";
+    const facebookUrl = "https://www.facebook.com/profile.php?id=100057922604554";
+
 
     return (
         <FooterContainer id="contato">
@@ -57,8 +60,8 @@ const Footer = () => {
                 <InfoColumn>
                     <ColumnTitle>Redes Sociais</ColumnTitle>
                     <SocialLinks>
-                        <SocialIcon href="#" target="_blank"><FaFacebook /></SocialIcon>
-                        <SocialIcon href="#" target="_blank"><FaInstagram /></SocialIcon>
+                        <SocialIcon href={facebookUrl} target="_blank"><FaFacebook /></SocialIcon>
+                        <SocialIcon href={instagramUrl} target="_blank"><FaInstagram /></SocialIcon>
                         <SocialIcon href={whatsappUrl} target="_blank"><FaWhatsapp /></SocialIcon>
                     </SocialLinks>
                 </InfoColumn>
@@ -66,7 +69,7 @@ const Footer = () => {
 
             {/* ÁREA DO COPYRIGHT E CRÉDITOS AGRUPADA E CENTRALIZADA */}
             <Copyright>
-                <p>© {new Date().getFullYear()} Colégio e Curso Equipe A. Todos os direitos reservados.</p>
+                <p>© 2025 Colégio e Curso Equipe A. Todos os direitos reservados.</p>
                 <p style={{ marginTop: '0.5rem' }}>
                     Desenvolvido por <a href="https://github.com/matteusmoreno" target="_blank" rel="noopener noreferrer">Matteus Moreno</a>
                 </p>

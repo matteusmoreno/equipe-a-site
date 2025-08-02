@@ -5,7 +5,9 @@ import { useTheme } from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
-    const theme = useTheme(); // Acessamos nosso objeto de tema para pegar a cor
+    const theme = useTheme();
+    const whatsappUrl = "https://api.whatsapp.com/send/?phone=5522997499766&text&type=phone_number&app_absent=0";
+
 
     return (
         <HeroContainer id="hero">
@@ -24,7 +26,7 @@ const Hero = () => {
                     <HeroP>1º lugar no ENEM em Saquarema desde 2018 e liderança em aprovações para Universidades Públicas.</HeroP>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-                    <HeroButton href="#contato">Fale Conosco</HeroButton>
+                    <HeroButton href={whatsappUrl} target='_blank'>Fale Conosco</HeroButton>
                 </motion.div>
             </HeroContent>
 

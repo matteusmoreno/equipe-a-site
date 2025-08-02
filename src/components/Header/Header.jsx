@@ -9,6 +9,8 @@ const Header = () => {
 
     const toggle = () => setIsOpen(!isOpen);
 
+    const formsUrl = "https://docs.google.com/forms/d/e/1FAIpQLSc7bqaJqrj6h2MLczX72INEMxAmEHBitLSGxUGbfKxpK7VPsg/viewform";
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
@@ -31,12 +33,10 @@ const Header = () => {
                     <Nav>
                         <NavLink href="#cursos">Nossos Cursos</NavLink>
                         <NavLink href="#aprovados">Aprovados</NavLink>
-                        {/* NOVO: Link para a Área do Estudante */}
                         <NavLink href="#student-area">Área do Estudante</NavLink>
-                        <NavLink href="#contato">Contato</NavLink>
                     </Nav>
 
-                    <CtaButton className="desktop-only" href="#contato">
+                    <CtaButton className="desktop-only" href={formsUrl} target="_blank">
                         Matrículas Abertas <FaArrowRight />
                     </CtaButton>
                 </ActionsWrapper>
