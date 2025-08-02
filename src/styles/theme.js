@@ -1,11 +1,12 @@
 export const theme = {
     colors: {
-        primary: '#0D47A1',    // Azul principal
-        secondary: '#1B9B88',  // Verde destaque
+        primary: '#0D47A1',
+        secondary: '#1B9B88',
         white: '#FFFFFF',
         text: '#333333',
-        lightGray: '#F4F7F6', // Fundo de seções
-        darkBlue: '#0a3a82',   // Azul mais escuro para o rodapé
+        lightGray: '#F4F7F6',
+        darkBlue: '#0a3a82',
+        dark: '#333333',
     },
     fonts: {
         headings: "'Poppins', sans-serif",
