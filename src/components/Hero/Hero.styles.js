@@ -48,6 +48,7 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
+  font-family: 'Goldman', sans-serif;
   font-size: 3.5rem;
   color: ${({ theme }) => theme.colors.white};
   margin-bottom: 1rem;
@@ -59,6 +60,7 @@ export const HeroH1 = styled.h1`
 `;
 
 export const HeroP = styled.p`
+  font-family: 'Goldman', sans-serif;
   font-size: 1.2rem;
   margin-bottom: 2rem;
   line-height: 1.6;
@@ -85,9 +87,6 @@ export const HeroButton = styled.a`
   &:hover {
     background: linear-gradient(90deg, ${({ theme }) => theme.colors.primary} 0%, ${({ theme }) => theme.colors.secondary} 100%);
     color: ${({ theme }) => theme.colors.white};
-    
-    /* A linha 'border-color: transparent;' foi REMOVIDA daqui. */
-    /* Agora o contorno verde permanece visível e cresce junto. */
     
     transform: translateY(-5px) scale(1.08);
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);

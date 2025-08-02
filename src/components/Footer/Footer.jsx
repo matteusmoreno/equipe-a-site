@@ -25,7 +25,6 @@ const Footer = () => {
                 {/* COLUNA 1: LOGO E DESCRIÇÃO */}
                 <InfoColumn>
                     <FooterLogo src={logoWhite} alt="Colégio e Curso Equipe A" />
-                    {/* TEXTO ATUALIZADO PARA A VERSÃO MAIS CURTA */}
                     <InfoText>Potencializando vencedores desde 2018.</InfoText>
                 </InfoColumn>
 
@@ -64,8 +63,13 @@ const Footer = () => {
                     </SocialLinks>
                 </InfoColumn>
             </FooterContent>
+
+            {/* ÁREA DO COPYRIGHT E CRÉDITOS AGRUPADA E CENTRALIZADA */}
             <Copyright>
-                © {new Date().getFullYear()} Colégio e Curso Equipe A. Todos os direitos reservados.
+                <p>© {new Date().getFullYear()} Colégio e Curso Equipe A. Todos os direitos reservados.</p>
+                <p style={{ marginTop: '0.5rem' }}>
+                    Desenvolvido por <a href="https://github.com/matteusmoreno" target="_blank" rel="noopener noreferrer">Matteus Moreno</a>
+                </p>
             </Copyright>
         </FooterContainer>
     );

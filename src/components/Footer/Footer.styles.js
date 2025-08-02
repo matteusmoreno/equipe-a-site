@@ -111,4 +111,16 @@ export const Copyright = styled.div`
   border-top: 1px solid rgba(255,255,255,0.1);
   color: rgba(255,255,255,0.5);
   font-size: 0.9rem;
+
+  /* ADICIONADO PARA ESTILIZAR O LINK DE CRÉDITOS */
+  a {
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.white};
+    }
+  }
 `;
