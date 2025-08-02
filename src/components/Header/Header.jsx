@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import logoSrc from '../../assets/logo-equipe-a.png';
-// NOVO: Importamos ActionsWrapper
 import { HeaderContainer, LogoWrapper, Logo, LogoText, ActionsWrapper, Nav, NavLink, CtaButton, MobileIcon, MobileMenu, CloseIcon } from './Header.styles';
 import { FaBars, FaTimes, FaArrowRight } from 'react-icons/fa';
 
@@ -28,11 +27,12 @@ const Header = () => {
                     <LogoText>Colégio e Curso Equipe A</LogoText>
                 </LogoWrapper>
 
-                {/* NOVO: Agrupamos Nav e CtaButton para alinhar à direita */}
                 <ActionsWrapper>
                     <Nav>
                         <NavLink href="#cursos">Nossos Cursos</NavLink>
                         <NavLink href="#aprovados">Aprovados</NavLink>
+                        {/* NOVO: Link para a Área do Estudante */}
+                        <NavLink href="#student-area">Área do Estudante</NavLink>
                         <NavLink href="#contato">Contato</NavLink>
                     </Nav>
 
@@ -53,6 +53,8 @@ const Header = () => {
                 </CloseIcon>
                 <NavLink onClick={toggle} href="#cursos">Nossos Cursos</NavLink>
                 <NavLink onClick={toggle} href="#aprovados">Aprovados</NavLink>
+                {/* NOVO: Link para a Área do Estudante no menu mobile */}
+                <NavLink onClick={toggle} href="#student-area">Área do Estudante</NavLink>
                 <NavLink onClick={toggle} href="#contato">Contato</NavLink>
                 <CtaButton href="#contato">
                     Matrículas Abertas <FaArrowRight />

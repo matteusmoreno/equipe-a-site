@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const StudentAreaContainer = styled.section`
-  background-color: ${({ theme }) => theme.colors.white};
+  /* NOVO: background alterado para lightGray para combinar com as seções anteriores */
+  background-color: ${({ theme }) => theme.colors.lightGray};
   padding-top: 100px;
   padding-bottom: 100px;
 `;
@@ -55,9 +56,6 @@ export const CardTitle = styled.h4`
   font-size: 1.2rem;
   font-weight: 600;
   color: ${({ theme }) => theme.colors.text};
-  /* A margem inferior foi removida, pois não há mais texto abaixo */
   margin-bottom: 0; 
   min-height: 40px;
 `;
-
-/* O ESTILO 'AccessText' FOI REMOVIDO COMPLETAMENTE DESTE ARQUIVO */
