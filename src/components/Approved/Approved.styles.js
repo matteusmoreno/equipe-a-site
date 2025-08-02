@@ -6,29 +6,44 @@ export const ApprovedSection = styled.section`
 `;
 
 export const TabContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
+  display: inline-flex;
+  position: relative;
+  border: 2px solid ${({ theme }) => theme.colors.primary};
+  border-radius: 10px;
+  margin: 0 auto 3rem auto;
+  
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
 export const TabButton = styled.button`
   font-family: ${({ theme }) => theme.fonts.headings};
-  padding: 0.8rem 2rem;
-  border-radius: 50px;
-  border: 2px solid ${({ theme }) => theme.colors.primary};
-  cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 0.8rem 2.5rem;
+  background: transparent;
+  border: none;
+  position: relative;
+  z-index: 2;
   
-  background-color: ${({ active, theme }) => active ? theme.colors.primary : theme.colors.white};
-  color: ${({ active, theme }) => active ? theme.colors.white : theme.colors.primary};
+  /* CORREÇÃO: Usando '$active' para ler a prop sem passá-la para o DOM */
+  color: ${({ $active, theme }) => $active ? theme.colors.white : theme.colors.primary};
   
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.darkBlue};
-    color: ${({ theme }) => theme.colors.white};
-  }
+  transition: color 0.4s ease;
+`;
+
+export const SlidingIndicator = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: ${({ theme }) => theme.colors.primary};
+  border-radius: 8px;
+  z-index: 1;
+  opacity: 0;
+
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 `;
 
 export const ContentContainer = styled.div`
@@ -48,11 +63,6 @@ export const CategoryTitle = styled.h3`
 
 export const SliderWrapper = styled.div`
   position: relative;
-  
-  /* REMOVIDO: a estilização das setas e o padding do swiper */
-  .swiper {
-    /* O padding foi removido pois não há mais setas para dar espaço */
-  }
 `;
 
 export const ApprovedCard = styled.div`
