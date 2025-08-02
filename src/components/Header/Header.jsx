@@ -53,10 +53,9 @@ const Header = () => {
                 </CloseIcon>
                 <NavLink onClick={toggle} href="#cursos">Nossos Cursos</NavLink>
                 <NavLink onClick={toggle} href="#aprovados">Aprovados</NavLink>
-                {/* NOVO: Link para a Área do Estudante no menu mobile */}
                 <NavLink onClick={toggle} href="#student-area">Área do Estudante</NavLink>
                 <NavLink onClick={toggle} href="#contato">Contato</NavLink>
-                <CtaButton href="#contato">
+                <CtaButton href={formsUrl} target="_blank">
                     Matrículas Abertas <FaArrowRight />
                 </CtaButton>
             </MobileMenu>
