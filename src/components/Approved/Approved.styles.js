@@ -27,7 +27,6 @@ export const TabButton = styled.button`
   position: relative;
   z-index: 2;
   
-  /* CORREÇÃO: Usando '$active' para ler a prop sem passá-la para o DOM */
   color: ${({ $active, theme }) => $active ? theme.colors.white : theme.colors.primary};
   
   transition: color 0.4s ease;
@@ -58,7 +57,15 @@ export const CategoryTitle = styled.h3`
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 3px solid ${({ theme }) => theme.colors.secondary};
-  display: inline-block;
+  display: inline-flex; /* Alterado para inline-flex para se ajustar ao conteúdo */
+  align-items: center; /* Alinha o ícone e o texto verticalmente */
+  gap: 0.8rem; /* Espaçamento entre o ícone e o texto */
+
+  /* Estiliza o ícone SVG dentro do título */
+  svg {
+    color: ${({ theme }) => theme.colors.primary};
+    margin-bottom: -2px; /* Pequeno ajuste vertical */
+  }
 `;
 
 export const SliderWrapper = styled.div`
